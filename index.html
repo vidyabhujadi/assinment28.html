@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 28</title>
+    <style>
+        body{
+            background-color:skyblue;
+        }
+        .container{
+            margin:20px auto;
+            width:300px;
+            background-color:blue;
+            padding: 20px;
+            border-radius: 10px;
+
+        }
+        #sun{
+            width: 80%;
+            display: block;
+            margin: 20px auto;
+        }
+       .app-heading{
+            color:white;
+            text-align: center;
+        }
+        .btn{
+           border: none;
+           padding:5px 20px;
+           border-radius: 5px;
+           cursor: pointer;
+        }
+        .btn-group{
+            display:flex;
+            justify-content: space-around;
+        }
+        .btn1{
+            background-color:red;
+        
+        }
+        .btn2{
+            background-color:yellow;
+        }
+        .btn3{
+            background-color:green;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 app-heading>Seasons....</h1>
+        <img src="sun.png" alt="sun" id="sun">
+
+        <div class="btn-group">
+            <button class="btn btn1"  onclick="summerSeason()">Summer</button>
+            <button class="btn btn2" onclick="winterSeason()">Winter</button>
+            <button class="btn btn3" onclick="mansoonSeason()">Mansoon</button>
+        </div>
+        <script>
+            let image = document.getElementById("sun");
+            function summerSeason(){
+                image.src = "sun.png"
+            }
+            function winterSeason(){
+                image.src = "jacket.png";
+            }
+            function mansoonSeason(){
+                image.src = "umbrella.png";
+            }
+        </script>
+
+    </div>
+</body>
+</html>
